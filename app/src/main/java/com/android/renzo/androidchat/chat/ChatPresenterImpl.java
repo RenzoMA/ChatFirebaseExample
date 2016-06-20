@@ -66,4 +66,11 @@ public class ChatPresenterImpl implements  ChatPresenter {
     public void setChatRecipient(String recipient) {
         chatInteractor.setRecipient(recipient);
     }
+
+    @Override
+    public void backToList() {
+        if(view != null) {
+            view.backToList();
+        }
+    }
 }

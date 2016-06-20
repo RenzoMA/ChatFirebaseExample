@@ -14,5 +14,6 @@ public interface ChatPresenter {
     void sendMessage(String msg);
     void onEventMainThread(ChatEvent event);
     void setChatRecipient(String recipient);
+    void backToList();
 
 }

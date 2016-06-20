@@ -7,5 +7,6 @@ import com.android.renzo.androidchat.entities.ChatMessage;
  */
 public interface ChatView {
     void onMessageReceived(ChatMessage msg);
+    void backToList();
 
 }

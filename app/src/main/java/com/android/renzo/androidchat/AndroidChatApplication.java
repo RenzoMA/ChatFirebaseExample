@@ -17,5 +17,6 @@ public class AndroidChatApplication extends Application {
     private void setupFirebase() {
         Firebase.setAndroidContext(this);
         Firebase.getDefaultConfig().setPersistenceEnabled(true);
+        //test
     }
 }

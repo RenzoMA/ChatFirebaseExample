@@ -65,18 +65,18 @@ public class ChatActivity extends AppCompatActivity implements ChatView {
         setupAdapter();
         setupRecyclerView();
         setupToolbar(getIntent());
-
     }
 
     private void setupRecyclerView() {
 
         final View activityRootView = findViewById(R.id.activityRoot);
+        final int initialHeight = activityRootView.getHeight();
         activityRootView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             boolean keyboardIsShown = false;
             @Override
             public void onGlobalLayout() {
-                int heightDiff = activityRootView.getRootView().getHeight() - activityRootView.getHeight();
-                if (heightDiff > 100 && !keyboardIsShown) {
+                int heightDiff = activityRootView.getRootView().getHeight() - initialHeight;
+                if (heightDiff > 1 && !keyboardIsShown) {
                     messageRecyclerView.scrollToPosition(adapter.getItemCount() - 1);
                     keyboardIsShown = true;
                 }else{
@@ -136,6 +136,12 @@ public class ChatActivity extends AppCompatActivity implements ChatView {
         adapter.add(msg);
         messageRecyclerView.scrollToPosition(adapter.getItemCount() - 1);
 
+    }
+
+    @OnClick(R.id.btnBack)
+    @Override
+    public void backToList() {
+        finish();
     }
 
     @OnClick(R.id.btnSendMessage)

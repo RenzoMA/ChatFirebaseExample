@@ -47,18 +47,19 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
         holder.txtMessage.setText(msg);
         LinearLayout.LayoutParams params = (LinearLayout.LayoutParams)holder.txtMessage.getLayoutParams();
 
-        int gravity = Gravity.LEFT;
+        int gravity;
 
         if(!chatMessage.isSentByMe()){
-            gravity = Gravity.RIGHT;
+            gravity = Gravity.LEFT;
             holder.txtMessage.setBackgroundResource(R.drawable.background_content_chat);
-            params.leftMargin = (int)context.getResources().getDimension(R.dimen.activity_chat_message_margin);
-            params.rightMargin = 0;
-        }
-        else{
-            holder.txtMessage.setBackgroundResource(R.drawable.background_content_chat_recipient);
             params.rightMargin = (int)context.getResources().getDimension(R.dimen.activity_chat_message_margin);
             params.leftMargin = 0;
+        }
+        else{
+            gravity = Gravity.RIGHT;
+            holder.txtMessage.setBackgroundResource(R.drawable.background_content_chat_recipient);
+            params.leftMargin = (int)context.getResources().getDimension(R.dimen.activity_chat_message_margin);
+            params.rightMargin = 0;
         }
 
         params.gravity = gravity;

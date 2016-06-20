@@ -13,7 +13,7 @@ public class ChatInteractorImpl implements ChatInteractor {
 
     @Override
     public void sendMessage(String msg) {
-        if(!msg.isEmpty()) {
+        if(!msg.trim().isEmpty()) {
             repository.sendMessage(msg);
         }
     }
