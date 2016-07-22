@@ -2,6 +2,10 @@ package com.android.renzo.androidchat.lib;
 
 import android.widget.ImageView;
 
+import com.bumptech.glide.load.resource.drawable.GlideDrawable;
+import com.bumptech.glide.request.RequestListener;
+import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
+
 import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
@@ -9,4 +13,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
  */
 public interface ImageLoader {
     void load(ImageView imgAvatar, String url);
+    void loadImgChat(String url,ImageView imageView);
+    void setOnFinishedImageLoadingListener(Object listener);
+
 }

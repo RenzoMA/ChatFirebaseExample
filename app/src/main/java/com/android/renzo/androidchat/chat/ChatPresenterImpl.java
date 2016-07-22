@@ -28,6 +28,7 @@ public class ChatPresenterImpl implements  ChatPresenter {
     @Override
     public void onPause() {
         chatInteractor.unsubscribe();
+        chatInteractor.destroyListener();
         sessionInteractor.changeConnectionStatus(User.OFFLINE);
     }
 
@@ -50,8 +51,8 @@ public class ChatPresenterImpl implements  ChatPresenter {
     }
 
     @Override
-    public void sendMessage(String msg) {
-        chatInteractor.sendMessage(msg);
+    public void sendMessage(String msg,String type) {
+        chatInteractor.sendMessage(msg,type);
     }
 
     @Override

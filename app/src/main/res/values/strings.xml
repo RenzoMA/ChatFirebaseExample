@@ -16,5 +16,7 @@
     <string name="addcontact.message.cancel">Cancelar</string>
     <string name="addcontact.message.contactadded">Contacto agregado exitosamente</string>
     <string name="addcontact.error.message">Imposible agregar usuario no existente</string>
+    <string name="chat_message_picture_source">Seleccione</string>
+    <string name="chat_error_dispatch_camera">Ocurrio un error</string>
 
 </resources>

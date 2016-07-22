@@ -5,7 +5,7 @@ package com.android.renzo.androidchat.chat;
  */
 public interface ChatRepository {
 
-    void sendMessage(String msg);
+    void sendMessage(String msg,String type);
     void setRecipient(String recipient);
 
     void subscribe();

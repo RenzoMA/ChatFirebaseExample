@@ -3,6 +3,10 @@
     package="com.android.renzo.androidchat" >
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name=".AndroidChatApplication"
@@ -12,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:windowSoftInputMode="adjustResize">
+        <meta-data
+            android:name="CLOUDINARY_URL"
+            android:value="cloudinary://231532571998513:zBLW1EhmG8xDvU7CJz50dSBfI_U@kriegerdev" />
         <activity
             android:name=".login.ui.LoginActivity"
             android:noHistory="true" >

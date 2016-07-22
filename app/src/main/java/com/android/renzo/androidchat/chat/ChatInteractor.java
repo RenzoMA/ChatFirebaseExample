@@ -4,7 +4,7 @@ package com.android.renzo.androidchat.chat;
  * Created by HOME on 13/06/2016.
  */
 public interface ChatInteractor {
-    void sendMessage(String msg);
+    void sendMessage(String msg, String type);
     void setRecipient(String recipient);
     void subscribe();
     void unsubscribe();

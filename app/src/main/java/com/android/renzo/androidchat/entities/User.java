@@ -1,11 +1,16 @@
 package com.android.renzo.androidchat.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.Map;
 
 /**
  * Created by HOME on 11/06/2016.
  */
 public class User {
+
+
+
     String email;
     boolean online;
     Map<String, Boolean> contacts;
